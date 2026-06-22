@@ -18,3 +18,20 @@ expense = {
 expenses.append(expense)
 
 print(expenses)
+
+expenses = []
+
+while True:
+    amount = input("Enter amount (or 'q' to quit): ")
+
+    if amount == "q":
+        break
+
+    category = input("Enter category: ")
+
+    expenses.append({
+        "amount": amount,
+        "category": category
+    })
+
+print(expenses)
