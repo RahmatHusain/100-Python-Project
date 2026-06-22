@@ -35,3 +35,10 @@ while True:
     })
 
 print(expenses)
+
+total = 0
+
+for expense in expenses:
+    total += float(expense["amount"])
+
+print("Total spent:", total)
