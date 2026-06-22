@@ -4,31 +4,32 @@ print("=== Expense Tracker ===")
 
 expenses = []
 
-# Load old data safely
+# Load data safely
 try:
     with open("data.json", "r") as file:
         expenses = json.load(file)
+        if not isinstance(expenses, list):
+            expenses = []
 except:
     expenses = []
 
 while True:
     amount = input("Enter amount (or 'q' to quit): ")
 
-    # Exit condition
     if amount.lower() == "q":
         break
 
-    # ERROR HANDLING: check valid number
+    # validate number
     try:
         amount = float(amount)
     except ValueError:
-        print("❌ Invalid amount! Please enter a number.")
+        print("❌ Invalid amount. Enter a number.")
         continue
 
-    category = input("Enter category: ")
+    # category input (STRICT)
+    category = input("Enter category (food, travel, etc): ").strip()
 
-    # Prevent empty category
-    if category.strip() == "":
+    if not category:
         print("❌ Category cannot be empty.")
         continue
 
@@ -37,20 +38,18 @@ while True:
         "category": category
     })
 
-# Show summary safely
+# SAVE DATA
+with open("data.json", "w") as file:
+    json.dump(expenses, file, indent=4)
+
+# DISPLAY OUTPUT
 print("\n--- Expense Summary ---")
 
-total = 0
+if len(expenses) == 0:
+    print("No expenses found.")
+else:
+    for expense in expenses:
+        print(f"{expense['category']} : {expense['amount']}")
 
-for expense in expenses:
-    try:
-        total += float(expense["amount"])
-        print(expense["category"], ":", expense["amount"])
-    except:
-        print("Skipping invalid record:", expense)
-
-print("\nTotal spent:", total)
-
-# Save data safely
-with open("data.json", "w") as file:
-    json.dump(expenses, file)
+    total = sum(float(e["amount"]) for e in expenses)
+    print("\nTotal spent:", total)
