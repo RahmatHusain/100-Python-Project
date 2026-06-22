@@ -42,3 +42,8 @@ for expense in expenses:
     total += float(expense["amount"])
 
 print("Total spent:", total)
+
+import json
+
+with open("data.json", "w") as file:
+    json.dump(expenses, file)
