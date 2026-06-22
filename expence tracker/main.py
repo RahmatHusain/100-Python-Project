@@ -47,3 +47,11 @@ import json
 
 with open("data.json", "w") as file:
     json.dump(expenses, file)
+
+    import json
+
+try:
+    with open("data.json", "r") as file:
+        expenses = json.load(file)
+except:
+    expenses = []
