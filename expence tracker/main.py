@@ -55,3 +55,7 @@ try:
         expenses = json.load(file)
 except:
     expenses = []
+
+    print("\n--- Expense Summary ---")
+for e in expenses:
+    print(e["category"], ":", e["amount"])
