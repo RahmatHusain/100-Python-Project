@@ -18,3 +18,13 @@ test_files/
 │
 │── Videos/
 │      movie.mp4
+
+# Github Structure
+automatic-file-organizer/
+│── main.py
+│── README.md
+│── test_files/
+│    ├── photo.jpg
+│    ├── resume.pdf
+│    ├── song.mp3
+│    └── movie.mp4
