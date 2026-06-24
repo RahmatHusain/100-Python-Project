@@ -50,3 +50,5 @@ if duplicates:
 else:
 
     print("No duplicate files found.")
+
+os.remove(file_path)
