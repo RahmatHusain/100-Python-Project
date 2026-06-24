@@ -4,7 +4,6 @@
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
@@ -56,7 +55,7 @@ automatic-file-organizer/
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/automatic-file-organizer.git
+git clone https://github.com/RahmatHusain/100-Python-Project.git
 ```
 
 ### 2️⃣ Open the project
@@ -157,7 +156,7 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-**Raaj Husain**
+**Rahmat Husain**
 
 - 🎓 BIT Student
 - 💻 Python Developer
