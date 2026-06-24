@@ -24,3 +24,18 @@ def get_file_hash(file_path):
     return hasher.hexdigest()
 file_hashes = {}
 duplicates = []
+
+for file in files:
+
+    file_path = os.path.join(folder_path, file)
+
+    if os.path.isdir(file_path):
+        continue
+
+    file_hash = get_file_hash(file_path)
+
+    if file_hash in file_hashes:
+        duplicates.append(file)
+
+    else:
+        file_hashes[file_hash] = file
