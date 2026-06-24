@@ -22,3 +22,5 @@ def get_file_hash(file_path):
             hasher.update(chunk)
 
     return hasher.hexdigest()
+file_hashes = {}
+duplicates = []
