@@ -39,3 +39,14 @@ for file in files:
 
     else:
         file_hashes[file_hash] = file
+
+print("\nDuplicate Files")
+
+if duplicates:
+
+    for file in duplicates:
+        print(file)
+
+else:
+
+    print("No duplicate files found.")
