@@ -2,7 +2,12 @@ import json
 import os
 
 FILE_NAME = "passwords.json"
+def load_passwords():
+    if os.path.exists(FILE_NAME):
+        with open(FILE_NAME, "r") as file:
+            return json.load(file)
 
+    return {}
 print("===== PASSWORD MANAGER =====")
 while True:
     print("\n===== PASSWORD MANAGER =====")
