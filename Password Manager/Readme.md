@@ -58,3 +58,95 @@ python main.py
 ```
 
 ---
+
+## 📸 Example Usage
+
+### Main Menu
+
+```text
+===== PASSWORD MANAGER =====
+
+1. Add Password
+2. View Password
+3. Exit
+```
+
+### Add Password
+
+```text
+Choose an option: 1
+
+Enter website: github
+Enter username: rahmathusain
+Enter password: mypassword123
+
+✅ Password saved successfully!
+```
+
+### View Password
+
+```text
+Choose an option: 2
+
+Enter website name: github
+
+Website : github
+Username: rahmathusain
+Password: mypassword123
+```
+
+---
+
+## 🛠 Technologies Used
+
+- Python
+- JSON
+- File Handling
+- Functions
+- Error Handling
+
+---
+
+## 📚 What I Learned
+
+- Working with JSON files
+- Reading and writing data
+- Creating reusable functions
+- Building menu-driven applications
+- Implementing error handling
+- Managing persistent data storage
+
+---
+
+## 🚀 Future Improvements
+
+- 🔒 Password Encryption
+- 🔑 Password Generator
+- 👤 Master Password Authentication
+- 🖥️ GUI Version using Tkinter
+- ☁️ Cloud Backup Support
+- 📊 Password Strength Checker
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Submit a Pull Request
+
+
+## 👨‍💻 Author
+
+**Rahmat Husain**
+
+🎓 BIT Student  
+💻 Python Developer  
+🚀 Passionate about Automation, Software Development, and Problem Solving
+
+---
+
+⭐ If you found this project useful, please consider giving it a star!
