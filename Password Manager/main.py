@@ -30,6 +30,17 @@ def add_password():
     save_passwords(data)
 
     print("Password saved successfully!")
+    def view_password():
+    website = input("Enter website name: ")
+
+    data = load_passwords()
+
+    if website in data:
+        print("\nWebsite :", website)
+        print("Username:", data[website]["username"])
+        print("Password:", data[website]["password"])
+    else:
+        print("No password found.")
 print("===== PASSWORD MANAGER =====")
 while True:
     print("\n===== PASSWORD MANAGER =====")
