@@ -14,6 +14,22 @@ def load_passwords():
 def save_passwords(data):
     with open(FILE_NAME, "w") as file:
         json.dump(data, file, indent=4)
+
+def add_password():
+    website = input("Enter website: ")
+    username = input("Enter username: ")
+    password = input("Enter password: ")
+
+    data = load_passwords()
+
+    data[website] = {
+        "username": username,
+        "password": password
+    }
+
+    save_passwords(data)
+
+    print("Password saved successfully!")
 print("===== PASSWORD MANAGER =====")
 while True:
     print("\n===== PASSWORD MANAGER =====")
