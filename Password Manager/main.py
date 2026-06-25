@@ -1,3 +1,6 @@
+import json
+import os
+
 print("===== PASSWORD MANAGER =====")
 while True:
     print("\n===== PASSWORD MANAGER =====")
