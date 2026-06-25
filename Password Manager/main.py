@@ -1,6 +1,8 @@
 import json
 import os
 
+FILE_NAME = "passwords.json"
+
 print("===== PASSWORD MANAGER =====")
 while True:
     print("\n===== PASSWORD MANAGER =====")
