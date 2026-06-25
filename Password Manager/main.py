@@ -11,6 +11,9 @@ def load_passwords():
             return {}
 
     return {}
+def save_passwords(data):
+    with open(FILE_NAME, "w") as file:
+        json.dump(data, file, indent=4)
 print("===== PASSWORD MANAGER =====")
 while True:
     print("\n===== PASSWORD MANAGER =====")
